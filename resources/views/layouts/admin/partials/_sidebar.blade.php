@@ -719,36 +719,7 @@
                             @endif
 
                         @endif
-
-                        @if(Helpers::module_permission_check(MANAGEMENT_SECTION['user_management']))
-
-                            <li class="navbar-vertical-aside-has-menu {{Request::is('admin/kitchen*')?'active':''}}">
-                                <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle"
-                                   href="javascript:">
-                                    <i class="tio-user nav-icon"></i>
-                                    <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">
-                                            {{translate('chef')}}
-                                        </span>
-                                    <label class="badge badge-danger">{{translate('addon')}}</label>
-                                </a>
-                                <ul class="js-navbar-vertical-aside-submenu nav nav-sub"
-                                    style="display: {{Request::is('admin/kitchen*')?'block':'none'}}">
-                                    <li class="nav-item {{Request::is('admin/kitchen/add-new')?'active':''}}">
-                                        <a class="nav-link " href="{{route('admin.kitchen.add-new')}}">
-                                            <span class="tio-circle nav-indicator-icon"></span>
-                                            <span class="text-truncate">{{translate('add_new')}}</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item {{Request::is('admin/kitchen/list')?'active':''}}">
-                                        <a class="nav-link" href="{{route('admin.kitchen.list')}}">
-                                            <span class="tio-circle nav-indicator-icon"></span>
-                                            <span class="text-truncate">{{translate('List')}}</span>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        @endif
+                        
 
                         <!-- User Management  End-->
 
